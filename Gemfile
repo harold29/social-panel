@@ -52,6 +52,8 @@ gem 'route_translator'
 
 gem 'rails-i18n'
 
+gem 'therubyracer'
+
 gem 'i18n-active_record', require: 'i18n/active_record'
 
 gem 'rack-i18n_locale_switcher'
