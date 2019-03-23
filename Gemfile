@@ -9,12 +9,22 @@ gem 'rails', '~> 5.2.2', '>= 5.2.2.1'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
+
+gem 'haml-rails'
+gem 'jquery-rails'
+
+gem 'haml'
+
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sassc-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
+
+gem 'activemodel-serializers-xml'
+gem 'globalize', git: 'https://github.com/globalize/globalize'
+gem 'globalize-accessors'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -22,6 +32,34 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+
+# Activeadmin for administration panel
+gem 'activeadmin'
+gem 'active_admin_theme'
+gem 'active_admin_datetimepicker'
+gem 'devise-two-factor'
+
+gem 'acts_as_list'
+gem 'active_admin-sortable_tree'
+gem 'ancestry'
+gem 'jquery-ui-rails'
+
+gem 'devise'
+gem 'devise-i18n'
+gem 'devise-security'
+
+gem 'route_translator'
+
+gem 'rails-i18n'
+
+gem 'i18n-active_record', require: 'i18n/active_record'
+
+gem 'rack-i18n_locale_switcher'
+
+gem 'kaminari'
+
+gem 'just-datetime-picker'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -39,6 +77,16 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  
+  gem 'rubocop', require: false
+
+  gem 'better_errors'
+
+  gem 'binding_of_caller'
+
+  gem 'rspec-rails'
+  
+  gem 'shoulda-matchers'
 end
 
 group :development do
@@ -56,6 +104,26 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+
+  gem 'factory_bot_rails'
+  
+  gem 'database_cleaner'
+  
+  gem 'guard'
+  
+  gem 'guard-rspec', require: false
+
+  gem 'webmock'
+end
+
+group :profilers, optional: true do
+  gem 'rack-mini-profiler'
+
+  gem 'bullet'
+
+  gem 'derailed_benchmarks'
+
+  gem 'brakeman', require: false 
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
